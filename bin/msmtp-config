@@ -1,0 +1,190 @@
+#!/bin/sh
+#
+#       Copyright (C) 2007-2008 Jari Aalto
+#
+#       This program is free software; you can redistribute it and/or
+#       modify it under the terms of the GNU General Public License as
+#       published by the Free Software Foundation; either version 2 of the
+#       License, or (at your option) any later version
+#
+#       This program is distributed in the hope that it will be useful, but
+#       WITHOUT ANY WARRANTY; without even the implied warranty of
+#       MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+#       General Public License for more details.
+#
+#       Visit <http://www.gnu.org/copyleft/gpl.html>
+#
+#       File /etc/msmtp/msmtprc
+#
+#       host smtp.your_provider.net
+#       from your_username@provider1.net
+#       auth login
+#       user your_username
+#       password your_password
+
+BINDIR=/usr/sbin
+SENDMAIL=$BINDIR/sendmail
+MSMTP=$BINDIR/msmtp
+
+CONFDIR=/etc/msmtp
+DEFCONF=/etc/msmtp/msmtprc
+
+Warn ()
+{
+    echo "$*" >&2
+}
+
+Die ()
+{
+    Warn "$0: [ERROR] $*"
+    exit 1
+}
+
+Help ()
+{
+    echo "
+Syntax: $0 [configuration file location]
+Configure default values to $CONF"
+
+    exit 0
+}
+
+Init ()
+{
+    if echo "$*" | egrep --regexp "-h|--help" > /dev/null; then
+        Help
+    fi
+
+    if ! which awk > /dev/null 2>&1 ; then
+        Die "awk not installed"
+    fi
+}
+
+IsYes ()
+{
+    case "$1" in
+        [yY]|yes|YES) return 0 ;;
+        *) return 1 ;;
+    esac
+}
+
+IsEmpty ()
+{
+    echo "$*" | egrep "^[ \t]*$" > /dev/null
+}
+
+Ask ()
+{
+    default="$1"
+    msg="$2"
+
+    if [ "$default" ]; then
+        msg="$msg (default:$default)"
+    fi
+
+    read -p "$msg: " ret
+
+    [ ! "$ret" ] && ret="$default"
+
+    echo $ret
+}
+
+Confvalue ()
+{
+    _key="$1"
+
+    if [ -s "$CONF" ]; then
+        awk -F= '/^[\t]*[^#]/ && $1 ~ re {print $2; exit}' \
+            re="$_key$"  "$CONF"
+    fi
+}
+
+Link ()
+{
+    mail="$SENDMAIL"
+
+    if [ -e "$mail" ]; then
+
+        if [ -f "$mail" ]; then
+            echo "$mail exists, won't touch"
+
+        elif [ -h "$mail" ]; then
+            echo "$mail is symbolic link, won't touch."
+            ls -l $mail
+        else
+            echo "$mail is something I don't know, won't touch"
+            ls -l $mail
+        fi
+    else
+
+        if [ -x "$MSMTP" ]; then
+            (cd $BINDIR && ln -s -v msmtp sendmail)
+
+        elif [ -e "$MSMTP" ]; then
+            echo "Hm, Not executable, won't link $MSMTP to $SENDMAIL"
+
+        else
+            echo "Hm, there is nothing to link: no $MSMTP"
+            exit 1
+        fi
+    fi
+}
+
+Main ()
+{
+    Init "$@"
+
+    CONF="${1:-$DEFCONF}"
+
+    if [ ! -f "$CONF" ]; then
+        Warn "[WARN] $CONF does not exist"
+    fi
+
+    dir=$(dirname $CONF)
+
+    if [ ! -d "$dir" ]; then
+        if [ "$CONF" = "$DEFCONF" ]; then
+            mkdir -p $dir || exit $?
+        else
+            Die "Missig directory for $CONF"
+        fi
+    fi
+
+    if egrep '^[^#]*account[ \t]+default' $CONF > /dev/null 2>&1
+    then
+        echo "'default' already configured. Please edit manually: $CONF"
+        exit 1
+    fi
+
+    unset host from user pass
+
+    host=$(Ask "$SMTPSERVER" "SMPT host to connect")
+    from=$(Ask "$EMAIL" "The envelope FROM address")
+
+    read -p "Do you need to provide authentication? (y/N)? " tmp
+
+    if IsYes "$tmp" ; then
+        user=$(Ask "${LOGNAME:-$USER}" "AUTH username")
+
+        pass=$(Ask "" "AUTH password")
+        IsEmpty "$pass" && Die "Empty AUTH password"
+    fi
+
+    Link || return $?
+
+    echo "# $CONF -- generated $(date '+%Y-%M-%d %H:%M')
+account default
+host $host
+from $from" >> $CONF
+
+    [ "$user" ] && echo "auth login
+user $user
+password $pass" >> $CONF
+
+    chmod 600 $CONF
+    echo "Wrote $CONF"
+}
+
+Main "$@"
+
+# End of file

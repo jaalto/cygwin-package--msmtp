@@ -1,0 +1,6 @@
+# This file contains extra options when files are
+# are installed. The options are given one option per line.
+--exclude=README.*
+--exclude=fdl.texi
+--exclude=gpl.texi
+

@@ -1,0 +1,145 @@
+msmtp
+------------------------------------------
+
+Light SMTP client with support for server profiles
+
+A SMTP client that can be used to send mails from Mutt and
+probably other MUAs (mail user agents). It forwards mails to an SMTP
+server (for example at a free mail provider), which takes care of the
+final delivery. Using profiles, it can be easily configured to use
+different SMTP servers with different configurations, which makes it
+ideal for mobile clients.
+
+Create sample /etc/msmtp/msmtprc or ~/.msmtprc (chmod 600):
+
+    account default
+    host smtp.your_provider.net
+    from your_username@provider1.net
+    # auth login
+    # user your_username
+    # password your_password
+    #
+    # If SMTP Server supports TLS encryption, uncomment the next line
+    # tls
+
+And configure MUA, like ~/.muttrc:
+
+    set sendmail="/usr/bin/msmtp"
+
+Runtime requirements:
+  cygwin
+  libiconv2
+  libidn11
+  libintl8
+  openssl
+
+Build requirements:
+  cygwin
+  libiconv2
+  libidn-devel
+  libintl8
+  openssl
+
+Canonical homepage:
+  http://sourceforge.net/projects/msmtp
+  http://freshmeat.net/projects/msmtp
+  http://packages.debian.org/msmtp
+
+Canonical download:
+  See above
+
+Version control repository:
+  http://sourceforge.net/cvs/?group_id=86651
+
+Mailing List:
+  http://sourceforge.net/mail/?group_id=86651
+  <msmtp-users@lists.sourceforge.net>
+
+IRC channel:
+
+Upstream contact:
+  Author: Martin Lambers <marlam@users.sourceforge.net>
+  Bugs: Martin Lambers <marlam@users.sourceforge.net>
+
+License:
+  GPL
+
+Language:
+  C
+
+------------------------------------
+
+Build instructions:
+  unpack msmtp-1.4.13-1-src.tar.bz2
+    if you use setup to install this src package, it will be
+    unpacked under /usr/src automatically
+  cd /usr/src
+  ./msmtp*.sh all
+
+This will create:
+  msmtp-1.4.13-1.tar.bz2
+  msmtp-1.4.13-1-src.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary distro:
+
+/etc/postinstall/msmtp.sh
+/usr/bin/msmtp-config
+/usr/sbin/msmtp.exe
+/usr/share/doc/Cygwin/msmtp-1.4.13.README
+/usr/share/doc/msmtp-1.4.13/AUTHORS
+/usr/share/doc/msmtp-1.4.13/COPYING
+/usr/share/doc/msmtp-1.4.13/ChangeLog
+/usr/share/doc/msmtp-1.4.13/Mutt+msmtp.txt
+/usr/share/doc/msmtp-1.4.13/NEWS
+/usr/share/doc/msmtp-1.4.13/README
+/usr/share/doc/msmtp-1.4.13/THANKS
+/usr/share/doc/msmtp-1.4.13/msmtp.texi
+/usr/share/doc/msmtp-1.4.13/msmtprc-system.example
+/usr/share/doc/msmtp-1.4.13/msmtprc-user.example
+/usr/share/info/msmtp.info
+/usr/share/man/man1/msmtp.1.gz
+
+------------------
+
+Port Notes:
+
+----- version 1.4.13-2 -----
+- New release 2007-12-03 Jari Aalto
+- libidn is now in Cygwin. Recompiled --with-libidn
+- Wrote msmtp-config
+
+Install prefix ....... : /usr
+TLS/SSL support ...... : yes (Library: OpenSSL)
+GNU SASL support ..... : yes
+GNU Libidn support ... : yes
+NLS support .......... : no
+
+----- version 1.4.13-1 -----
+- New upstream release 2007-11-29 Jari Aalto
+- This port is based on Debian source
+- Confiured with:
+
+Install prefix ....... : /usr
+TLS/SSL support ...... : yes (Library: OpenSSL)
+GNU SASL support ..... : yes
+GNU Libidn support ... : no
+NLS support .......... : no
+
+----- version 1.4.5-1 -----
+- New upstream release 2006-01-24 Jari Aalto / private
+- This port is based on sourceforge
+- Requires GNU gsasl 0.2.10+
+
+----- version 1.2.4-1 -----
+- Initial release 2005-01-20 Jari Aalto / private.
+- This port is based on Debian package.
+- Compiled with GSASL and TLS (OpenSSL) support.
+- Makefile.in src/Makefile.in: configure script enerates odd code
+  'GSASL_LIBS = -R/usr/lib -lgsasl'. The -R is not recognized by gcc.
+  Replaced with 'GSASL_LIBS = -lgsasl -lintl'. Replaced
+  'ginstall' with simple 'install' in all Makefile.in files.
+
+Cygwin port maintained by: Jari Aalto <jari.aalto@cante.net>
+Copyright (C) 2007 Jari Aalto; Licenced under GPL v2 or later

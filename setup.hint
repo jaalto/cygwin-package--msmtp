@@ -1,0 +1,9 @@
+sdesc: "Light SMTP client with support for server profiles"
+ldesc: "A SMTP client that can be used to send mails from Mutt and
+probably other MUAs (mail user agents). It forwards mails to an SMTP
+server (for example at a free mail provider), which takes care of the
+final delivery. Using profiles, it can be easily configured to use
+different SMTP servers with different configurations, which makes it
+ideal for mobile clients."
+category: Mail
+requires: cygwin libiconv2 libidn11 libintl8 openssl
