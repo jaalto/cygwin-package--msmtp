@@ -135,3 +135,11 @@ Main()
 Main "$@"
 
 # End of file
+#:info
+(
+    cd /usr/share/info &&
+    for i in  msmtp.info
+    do
+	install-info --dir-file=./dir --info-file=$i
+    done
+)
