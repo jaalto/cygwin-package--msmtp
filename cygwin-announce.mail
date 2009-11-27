@@ -1,8 +1,7 @@
-Copyright (C) 2007 Jari Aalto; Licenced under GPL v2 or later
+Copyright (C) 2007-2009 Jari Aalto; Licenced under GPL v2 or later
 
 To: cygwin-announce@cygwin.com
-Subject: Updated: package N.N
-Subject: New package: msmtp 1.4.13-1 -- Light SMTP client with support for server profiles
+Subject: Updated: package 1.4.18-1 -- Light SMTP client with support for server profiles
 
 PACKAGE DESCRIPTION
 ===================
@@ -21,7 +20,10 @@ ideal for mobile clients.
 CHANGES SINCE LAST RELEASE
 ==========================
 
-See http://freshmeat.net/redir/msmtp/42503/url_changelog/ChangeLog
+See Release log at http://freshmeat.net/projects/msmtp
+
+NOTE: version 1.4.19 is not currently available for Cygwin (does not
+compile).
 
 INSTALL OR UPGRADE NOTES
 ========================
