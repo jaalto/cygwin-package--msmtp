@@ -6,4 +6,4 @@ final delivery. Using profiles, it can be easily configured to use
 different SMTP servers with different configurations, which makes it
 ideal for mobile clients."
 category: Mail
-requires: cygwin libiconv2 libidn11 libintl8 openssl
+requires: cygwin libidn11 libintl8 openssl
