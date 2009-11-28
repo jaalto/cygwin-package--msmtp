@@ -28,17 +28,16 @@ And configure MUA, like ~/.muttrc:
 
 Runtime requirements:
   cygwin
-  libiconv2
   libidn11
   libintl8
   openssl
 
 Build requirements:
   cygwin
-  libiconv2
   libidn-devel
   libintl8
   openssl
+  libsasl2-devel
 
 Canonical homepage:
   http://sourceforge.net/projects/msmtp
@@ -70,40 +69,36 @@ Language:
 ------------------------------------
 
 Build instructions:
-  unpack msmtp-1.4.13-1-src.tar.bz2
+  unpack msmtp-1.4.18-1-src.tar.bz2
     if you use setup to install this src package, it will be
     unpacked under /usr/src automatically
   cd /usr/src
   ./msmtp*.sh all
 
 This will create:
-  msmtp-1.4.13-1.tar.bz2
-  msmtp-1.4.13-1-src.tar.bz2
+  msmtp-1.4.18-1.tar.bz2
+  msmtp-1.4.18-1-src.tar.bz2
 
 -------------------------------------------
 
 Files included in the binary distro:
-
-/etc/postinstall/msmtp.sh
-/usr/bin/msmtp-config
-/usr/sbin/msmtp.exe
-/usr/share/doc/Cygwin/msmtp-1.4.13.README
-/usr/share/doc/msmtp-1.4.13/AUTHORS
-/usr/share/doc/msmtp-1.4.13/COPYING
-/usr/share/doc/msmtp-1.4.13/ChangeLog
-/usr/share/doc/msmtp-1.4.13/Mutt+msmtp.txt
-/usr/share/doc/msmtp-1.4.13/NEWS
-/usr/share/doc/msmtp-1.4.13/README
-/usr/share/doc/msmtp-1.4.13/THANKS
-/usr/share/doc/msmtp-1.4.13/msmtp.texi
-/usr/share/doc/msmtp-1.4.13/msmtprc-system.example
-/usr/share/doc/msmtp-1.4.13/msmtprc-user.example
-/usr/share/info/msmtp.info
-/usr/share/man/man1/msmtp.1.gz
+  See Cygwin package archive
 
 ------------------
 
 Port Notes:
+
+----- version 1.4.18-1 -----
+- New upstream release 2009-11-27 Jari Aalto
+- Note: 1.4.19 does not build under Cygwin.
+
+Install prefix ......... : /usr
+TLS/SSL support ........ : yes (Library: OpenSSL)
+GNU SASL support ....... : no
+GNU Libidn support ..... : yes
+NLS support ............ : yes
+GNOME Keyring support .. : no
+MacOS X Keychain support : no
 
 ----- version 1.4.13-2 -----
 - New release 2007-12-03 Jari Aalto
@@ -142,4 +137,4 @@ NLS support .......... : no
   'ginstall' with simple 'install' in all Makefile.in files.
 
 Cygwin port maintained by: Jari Aalto <jari.aalto@cante.net>
-Copyright (C) 2007 Jari Aalto; Licenced under GPL v2 or later
+Copyright (C) 2007-2009 Jari Aalto; Licenced under GPL v2 or later
