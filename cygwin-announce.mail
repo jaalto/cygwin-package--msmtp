@@ -20,7 +20,8 @@ ideal for mobile clients.
 CHANGES SINCE LAST RELEASE
 ==========================
 
-See Release log at http://freshmeat.net/projects/msmtp
+See http://freshmeat.net/projects/msmtp
+and /usr/share/doc/msmtp-*/NEWS
 
 NOTE: version 1.4.19 is not currently available for Cygwin (does not
 compile).
