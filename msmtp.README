@@ -28,16 +28,17 @@ And configure MUA, like ~/.muttrc:
 
 Runtime requirements:
   cygwin
-  libidn11
+  libgcc1
   libintl8
-  openssl
+  libopenssl098
+  zlib0
 
 Build requirements:
-  cygwin
   libidn-devel
   libintl8
-  openssl
+  openssl-devel
   libsasl2-devel
+  zlib-devel
 
 Canonical homepage:
   http://sourceforge.net/projects/msmtp
@@ -69,15 +70,15 @@ Language:
 ------------------------------------
 
 Build instructions:
-  unpack msmtp-1.4.18-1-src.tar.bz2
+  unpack msmtp-1.4.22-1-src.tar.bz2
     if you use setup to install this src package, it will be
     unpacked under /usr/src automatically
   cd /usr/src
   ./msmtp*.sh all
 
 This will create:
-  msmtp-1.4.18-1.tar.bz2
-  msmtp-1.4.18-1-src.tar.bz2
+  msmtp-1.4.22-1.tar.bz2
+  msmtp-1.4.22-1-src.tar.bz2
 
 -------------------------------------------
 
@@ -87,6 +88,9 @@ Files included in the binary distro:
 ------------------
 
 Port Notes:
+
+----- version 1.4.22-1 -----
+- New upstream release 2011-02-11 Jari Aalto
 
 ----- version 1.4.18-1 -----
 - New upstream release 2009-11-27 Jari Aalto
@@ -137,4 +141,4 @@ NLS support .......... : no
   'ginstall' with simple 'install' in all Makefile.in files.
 
 Cygwin port maintained by: Jari Aalto <jari.aalto@cante.net>
-Copyright (C) 2007-2009 Jari Aalto; Licenced under GPL v2 or later
+Copyright (C) 2007-2011 Jari Aalto; Licenced under GPL v2 or later
