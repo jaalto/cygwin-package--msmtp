@@ -1,2 +1,2 @@
 tag1: msmtp
-  http://packages.debian.org/unstable/msmtp pregexp:orig.tar.gz file:msmtp_1.4.13.orig.tar.gz new: x:
+  http://packages.debian.org/unstable/msmtp pregexp:orig.tar.bz2 file:msmtp_1.4.13.orig.tar.bz2 new: x:
