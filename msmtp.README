@@ -28,11 +28,13 @@ And configure MUA, like ~/.muttrc:
 
 Runtime requirements:
   libgcc1
-  libopenssl098
+  libgnutls26
+  libidn11
+  libintl8
   zlib0
 
 Build requirements:
-  openssl-devel
+  gnutls-devel
   libsasl2-devel
   zlib-devel
 
@@ -66,15 +68,15 @@ Language:
 ------------------------------------
 
 Build instructions:
-  unpack msmtp-1.4.27-1-src.tar.bz2
+  unpack msmtp-1.4.28-1-src.tar.bz2
     if you use setup to install this src package, it will be
     unpacked under /usr/src automatically
   cd /usr/src
   ./msmtp*.sh all
 
 This will create:
-  msmtp-1.4.27-1.tar.bz2
-  msmtp-1.4.27-1-src.tar.bz2
+  msmtp-1.4.28-1.tar.bz2
+  msmtp-1.4.28-1-src.tar.bz2
 
 -------------------------------------------
 
@@ -84,6 +86,9 @@ Files included in the binary distro:
 ------------------
 
 Port Notes:
+
+----- version 1.4.28-1 -----
+- New upstream release 2012-09-15 Jari Aalto
 
 ----- version 1.4.27-1 -----
 - New upstream release 2012-01-29 Jari Aalto

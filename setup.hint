@@ -6,4 +6,4 @@ final delivery. Using profiles, it can be easily configured to use
 different SMTP servers with different configurations, which makes it
 ideal for mobile clients."
 category: Mail
-requires: libgcc1 libopenssl098 zlib0
+requires: libgcc1 libgnutls26 libidn11 libintl8 zlib0
