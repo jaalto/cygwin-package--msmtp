@@ -19,7 +19,7 @@ ideal for mobile clients.
 CHANGES SINCE LAST RELEASE
 ==========================
 
-See http://freshmeat.net/projects/msmtp
+See homepage for release announcements
 and /usr/share/doc/msmtp-*/NEWS
 
 INSTALL OR UPGRADE NOTES
@@ -36,7 +36,7 @@ system. Then, run setup and answer all of the questions. You'll find
 the package listed in the "All" category. After installation, read the
 documentation at directories:
 
-    /usr/share/doc/<package-version>/*
+    /usr/share/doc/<package>/*
     /usr/share/doc/Cygwin/<package-version>.README
 
 If you have questions or comments, please send them to the Cygwin
