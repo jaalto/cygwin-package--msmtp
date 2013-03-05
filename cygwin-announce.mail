@@ -1,5 +1,5 @@
 To: cygwin-announce@cygwin.com
-Subject: Updated: msmtp 1.4.28-1 -- Light SMTP client with support for server profiles
+Subject: Updated: msmtp 1.4.30-1 -- Light SMTP client with support for server profiles
 --text follows this line--
 
 PACKAGE DESCRIPTION
@@ -25,7 +25,7 @@ and /usr/share/doc/msmtp-*/NEWS
 INSTALL OR UPGRADE NOTES
 ========================
 
-Standard install
+Standard install.
 
 CYGWIN INSTALLATION INFORMATION
 ===============================

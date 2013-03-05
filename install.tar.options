@@ -3,4 +3,6 @@
 --exclude=README.*
 --exclude=fdl.texi
 --exclude=gpl.texi
-
+--exclude=ABOUT-NLS
+--exclude=INSTALL
+--exclude=version.texi
