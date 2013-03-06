@@ -6,7 +6,7 @@ PACKAGE DESCRIPTION
 ===================
 
 Homepage: http://freshmeat.net/projects/msmtp
-License : GPL
+License : GPL-3+, LGPL-3+
 
 A SMTP client that can be used to send mails from Mutt and
 probably other MUAs (mail user agents). It forwards mails to an SMTP

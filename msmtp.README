@@ -36,7 +36,7 @@ Runtime requirements:
   zlib0
 
 Build requirements:
-  gnome-kering
+  gnome-keyring
   gnutls-devel
   libglib2.0-devel
   libsasl2-devel
@@ -65,7 +65,8 @@ Upstream contact:
   Bugs: <msmtp-users@lists.sourceforge.net>
 
 License:
-  GPL
+  GPL-3+
+  LGPL-3+
 
 Language:
   C
