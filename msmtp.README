@@ -74,15 +74,15 @@ Language:
 ------------------------------------
 
 Build instructions:
-  unpack msmtp-1.4.30-1-src.tar.bz2
+  unpack msmtp-1.4.31-1-src.tar.bz2
     if you use setup to install this src package, it will be
     unpacked under /usr/src automatically
   cd /usr/src
   ./msmtp*.sh all
 
 This will create:
-  msmtp-1.4.30-1.tar.bz2
-  msmtp-1.4.30-1-src.tar.bz2
+  msmtp-1.4.31-1.tar.bz2
+  msmtp-1.4.31-1-src.tar.bz2
 
 -------------------------------------------
 
@@ -92,6 +92,9 @@ Files included in the binary distro:
 ------------------
 
 Port Notes:
+
+----- version 1.4.31-1 -----
+- New upstream release 2013-09-11 user
 
 ----- version 1.4.30-1 -----
 - New upstream release 2013-03-05 Jari Aalto
@@ -153,5 +156,5 @@ NLS support .......... : no
   Replaced with 'GSASL_LIBS = -lgsasl -lintl'. Replaced
   'ginstall' with simple 'install' in all Makefile.in files.
 
-Cygwin port maintained by: Jari Aalto <jari.aalto@cante.net>
+Cygwin port maintained by: user <jari.aalto@cante.net>
 Copyright (C) 2007-2013 Jari Aalto; Licenced under GPL v2 or later
