@@ -74,15 +74,15 @@ Language:
 ------------------------------------
 
 Build instructions:
-  unpack msmtp-1.4.31-1-src.tar.bz2
+  unpack msmtp-1.4.31-2-src.tar.bz2
     if you use setup to install this src package, it will be
     unpacked under /usr/src automatically
   cd /usr/src
   ./msmtp*.sh all
 
 This will create:
-  msmtp-1.4.31-1.tar.bz2
-  msmtp-1.4.31-1-src.tar.bz2
+  msmtp-1.4.31-2.tar.bz2
+  msmtp-1.4.31-2-src.tar.bz2
 
 -------------------------------------------
 
@@ -92,6 +92,17 @@ Files included in the binary distro:
 ------------------
 
 Port Notes:
+
+----- version 1.4.31-2 -----
+- New upstream release 2013-09-13 user
+- Linked with more libraries:
+  Install prefix ......... : /usr
+  TLS/SSL support ........ : yes (Library: GnuTLS)
+  GNU SASL support ....... : no
+  GNU Libidn support ..... : yes
+  NLS support ............ : yes
+  GNOME Keyring support .. : yes
+  MacOS X Keychain support : no
 
 ----- version 1.4.31-1 -----
 - New upstream release 2013-09-11 user

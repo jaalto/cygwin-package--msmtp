@@ -1,5 +1,5 @@
 To: cygwin-announce@cygwin.com
-Subject: Updated: msmtp 1.4.31-1 -- Light SMTP client with support for server profiles
+Subject: Updated: msmtp 1.4.31-2 -- Light SMTP client with support for server profiles
 --text follows this line--
 
 PACKAGE DESCRIPTION
@@ -15,9 +15,10 @@ final delivery. Using profiles, it can be easily configured to use
 different SMTP servers with different configurations, which makes it
 ideal for mobile clients.
 
-
 CHANGES SINCE LAST RELEASE
 ==========================
+
+Linked with TLS/SSL and idn support.
 
 See homepage for release announcements
 and /usr/share/doc/msmtp-*/NEWS
