@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-#       Copyright (C) 2007-2009 Jari Aalto
+#       Copyright (C) 2007-2014 Jari Aalto
 #
 #       This program is free software; you can redistribute it and/or
 #       modify it under the terms of the GNU General Public License as
@@ -27,7 +27,7 @@ SENDMAIL=$BINDIR/sendmail
 MSMTP=$BINDIR/msmtp
 
 CONFDIR=/etc/msmtp
-DEFCONF=/etc/msmtp/msmtprc
+DEFCONF=$CONFDIR/msmtprc
 
 Warn ()
 {
@@ -153,7 +153,7 @@ Main ()
     if egrep '^[^#]*account[ \t]+default' $CONF > /dev/null 2>&1
     then
         echo "'default' already configured. Please edit manually: $CONF"
-        exit 1
+        return 1
     fi
 
     unset host from user pass
