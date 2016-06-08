@@ -74,15 +74,15 @@ Language:
 ------------------------------------
 
 Build instructions:
-  unpack msmtp-1.6.2-1-src.tar.bz2
+  unpack msmtp-1.6.4-1-src.tar.bz2
     if you use setup to install this src package, it will be
     unpacked under /usr/src automatically
   cd /usr/src
   ./msmtp*.sh all
 
 This will create:
-  msmtp-1.6.2-1.tar.xz
-  msmtp-1.6.2-1-src.tar.xz
+  msmtp-1.6.4-1.tar.xz
+  msmtp-1.6.4-1-src.tar.xz
 
 -------------------------------------------
 
@@ -92,6 +92,9 @@ Files included in the binary distro:
 ------------------
 
 Port Notes:
+
+----- version 1.6.4-1 -----
+- New upstream release 2016-06-08 Jari Aalto
 
 ----- version 1.6.2-1 -----
 - New upstream release 2015-09-28 Jari Aalto
@@ -171,4 +174,4 @@ NLS support .......... : no
   'ginstall' with simple 'install' in all Makefile.in files.
 
 Cygwin port maintained by: Jari Aalto <jari.aalto@cante.net>
-Copyright (C) 2007-2015 Jari Aalto; Licenced under GPL v2 or later
+Copyright (C) 2007-2016 Jari Aalto; Licenced under GPL v2 or later
