@@ -18,8 +18,6 @@ ideal for mobile clients.
 CHANGES SINCE LAST RELEASE
 ==========================
 
-Linked with TLS/SSL and idn support.
-
 See homepage for release announcements
 and /usr/share/doc/msmtp-*/NEWS
 
@@ -27,6 +25,7 @@ INSTALL OR UPGRADE NOTES
 ========================
 
 Standard install.
+Linked with TLS/SSL and idn support.
 
 CYGWIN INSTALLATION INFORMATION
 ===============================
