@@ -44,15 +44,15 @@ Build requirements:
   zlib-devel
 
 Canonical homepage:
-  http://sourceforge.net/projects/msmtp
-  http://freshmeat.net/projects/msmtp
+  https://marlam.de/msmtp/
   http://packages.debian.org/msmtp
+  OLD, no longer: http://sourceforge.net/projects/msmtp
 
 Canonical download:
   See above
 
 Version control repository:
-  http://sourceforge.net/cvs/?group_id=86651
+  git clone https://git.marlam.de/git/msmtp.git
 
 Mailing List:
   http://sourceforge.net/mail/?group_id=86651
