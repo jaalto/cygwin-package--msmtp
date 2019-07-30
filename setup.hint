@@ -6,4 +6,4 @@ final delivery. Using profiles, it can be easily configured to use
 different SMTP servers with different configurations, which makes it
 ideal for mobile clients."
 category: Mail
-requires: libgnutls28 libglib2.0_0 libgnome-keyring0 libidn11 libintl8 zlib0
+requires: libgnutls30 libglib2.0_0 libsecret1_0 libidn11 libintl8 zlib0

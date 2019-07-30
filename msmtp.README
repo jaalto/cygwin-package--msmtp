@@ -30,13 +30,13 @@ Runtime requirements:
   libgcc1
   libgnutls28
   libglib2.0_0
-  libgnome-keyring0
+  libsecret1_0
   libidn11
   libintl8
   zlib0
 
 Build requirements:
-  gnome-keyring
+  libsecret1-devel
   gnutls-devel
   libglib2.0-devel
   libsasl2-devel
@@ -92,6 +92,13 @@ Files included in the binary distro:
 ------------------
 
 Port Notes:
+
+----- version 1.6.6-2 -----
+- New cygwin release 2018-04-05 Jari Aalto
+- Configure wth --with-libsecret
+- Change depends libgnome-keyring0 (gnome-keyring) to
+  libsecret1_0 (libsecret-devel)
+  https://cygwin.com/ml/cygwin/2018-04/msg00023.html
 
 ----- version 1.6.6-1 -----
 - New upstream release 2017-09-25 Jari Aalto
