@@ -6,3 +6,6 @@
 
 # SMTP programs are installed in here
 --bindir=/usr/sbin
+
+# Keyring, instead of gnome-keyring
+--with-libsecret
