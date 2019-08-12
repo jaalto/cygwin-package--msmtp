@@ -76,15 +76,15 @@ Language:
 ------------------------------------
 
 Build instructions:
-  unpack msmtp-1.6.6-1-src.tar.bz2
+  unpack msmtp-1.8.5+20190811+git7912c76-1-src.tar.bz2
     if you use setup to install this src package, it will be
     unpacked under /usr/src automatically
   cd /usr/src
   ./msmtp*.sh all
 
 This will create:
-  msmtp-1.6.6-1.tar.xz
-  msmtp-1.6.6-1-src.tar.xz
+  msmtp-1.8.5+20190811+git7912c76-1.tar.xz
+  msmtp-1.8.5+20190811+git7912c76-1-src.tar.xz
 
 -------------------------------------------
 
@@ -94,6 +94,17 @@ Files included in the binary distro:
 ------------------
 
 Port Notes:
+
+----- version 1.8.5+20190811+git7912c76-1 -----
+- New upstream release 2019-08-12 Jari Aalto
+  Install prefix ......... : /usr/local
+  NLS support ............ : yes
+  TLS support ............ : yes (Library: GnuTLS)
+  IDN support ............ : yes (no library required)
+  GNU SASL support ....... : no (most likely unnecessary)
+  Libsecret support (GNOME): yes
+  MacOS X Keychain support : no
+  Build msmtpd ............: yes
 
 ----- version 1.6.6-2 -----
 - New cygwin release 2018-04-05 Jari Aalto
@@ -186,4 +197,4 @@ NLS support .......... : no
   'ginstall' with simple 'install' in all Makefile.in files.
 
 Cygwin port maintained by: Jari Aalto <jari.aalto@cante.net>
-Copyright (C) 2007-2017 Jari Aalto; Licenced under GPL v2 or later
+Copyright (C) 2007-2019 Jari Aalto; Licenced under GPL v2 or later
