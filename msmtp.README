@@ -37,6 +37,7 @@ Runtime requirements:
 
 Build requirements:
   libsecret1-devel
+  libasyncns-devel
   gnutls-devel
   libglib2.0-devel
   libsasl2-devel
@@ -55,13 +56,14 @@ Version control repository:
   git clone https://git.marlam.de/git/msmtp.git
 
 Mailing List:
-  http://sourceforge.net/mail/?group_id=86651
-  <msmtp-users@lists.sourceforge.net>
+  OLD: http://sourceforge.net/mail/?group_id=86651
+  OLD: <msmtp-users@lists.sourceforge.net>
 
 IRC channel:
 
 Upstream contact:
-  Author: Martin Lambers <marlam@users.sourceforge.net>
+  Author: Martin Lambers <marlam@marlam.de>
+>     OLD: <marlam@users.sourceforge.net>
   Bugs: <msmtp-users@lists.sourceforge.net>
 
 License:
