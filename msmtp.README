@@ -95,8 +95,20 @@ Files included in the binary distro:
 
 Port Notes:
 
+----- version 1.8.5+20190811+git7912c76-3 -----
+- Configure with --prefix=/usr
+- New upstream release 2019-10-10 Jari Aalto
+  Install prefix ......... : /usr
+  NLS support ............ : yes
+  TLS support ............ : yes (Library: GnuTLS)
+  IDN support ............ : yes (no library required)
+  GNU SASL support ....... : no (most likely unnecessary)
+  Libsecret support (GNOME): yes
+  MacOS X Keychain support : no
+  Build msmtpd ............: yes
+
 ----- version 1.8.5+20190811+git7912c76-2 -----
-- Compile with configure option --sysconfdir=/etc
+- Configure with --sysconfdir=/etc
   to fix location /usr/etc/msmtprc
 - Options:
   Install prefix ......... : /usr/local
