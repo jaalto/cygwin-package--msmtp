@@ -9,3 +9,5 @@
 
 # Keyring, instead of gnome-keyring
 --with-libsecret
+
+--sysconfdir=/etc
