@@ -1,0 +1,11 @@
+--- po/Makefile.in.in.orig	2020-05-05 13:38:43.702835900 +0300
++++ po/Makefile.in.in	2020-05-05 13:39:01.107831400 +0300
+@@ -8,7 +8,7 @@
+ # without any warranty.
+ #
+ # Origin: gettext-0.20.2
+-GETTEXT_MACRO_VERSION = 0.20
++GETTEXT_MACRO_VERSION = 0.19
+ 
+ PACKAGE = @PACKAGE@
+ VERSION = @VERSION@
