@@ -3,6 +3,7 @@
 
 # --disable-nls
 --with-libidn
+--with-libgsasl
 
 # SMTP programs are installed in here
 --bindir=/usr/sbin

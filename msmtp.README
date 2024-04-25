@@ -40,6 +40,7 @@ Build requirements:
   libasyncns-devel
   gnutls-devel
   libglib2.0-devel
+  libgsasl-devel
   libsasl2-devel
   libidn-devel
   zlib-devel
@@ -76,15 +77,15 @@ Language:
 ------------------------------------
 
 Build instructions:
-  unpack msmtp-1.8.10+20200430+gitf9dd8e7-1-src.tar.bz2
+  unpack msmtp-1.8.25+20240305+git0896ad7-1-src.tar.bz2
     if you use setup to install this src package, it will be
     unpacked under /usr/src automatically
   cd /usr/src
   ./msmtp*.sh all
 
 This will create:
-  msmtp-1.8.10+20200430+gitf9dd8e7-1.tar.xz
-  msmtp-1.8.10+20200430+gitf9dd8e7-1-src.tar.xz
+  msmtp-1.8.25+20240305+git0896ad7-1.tar.xz
+  msmtp-1.8.25+20240305+git0896ad7-1-src.tar.xz
 
 -------------------------------------------
 
@@ -94,6 +95,9 @@ Files included in the binary distro:
 ------------------
 
 Port Notes:
+
+----- version 1.8.25+20240305+git0896ad7-1 -----
+- New upstream release 2024-04-25 Jari Aalto
 
 ----- version 1.8.10+20200430+gitf9dd8e7-1 -----
 - New upstream release 2020-05-05 Jari Aalto
@@ -225,4 +229,4 @@ NLS support .......... : no
   'ginstall' with simple 'install' in all Makefile.in files.
 
 Cygwin port maintained by: Jari Aalto <jari.aalto@cante.net>
-Copyright (C) 2007-2020 Jari Aalto; Licenced under GPL v2 or later
+Copyright (C) 2007-2024 Jari Aalto; Licenced under GPL v2 or later
